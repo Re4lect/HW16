@@ -8,14 +8,13 @@ public class Main {
     public static void callNumber(){
         System.out.println("Введите телевонный номер: ");
         String number = new Scanner(System.in).nextLine();
-        String newNumber = number.replaceAll("[., \\-()+]","");
-        String lastNumber = "";
-        if(newNumber.length()==10){
-            lastNumber = "8"+newNumber;
-        } else {lastNumber = newNumber;
+        number = number.replaceAll("[., \\-()+]","");
+
+        if(number.length()==10){
+            number = "8"+number;
         }
-        if((lastNumber.length()==11)&&((lastNumber.charAt(0)=='7')||(lastNumber.charAt(0)=='8'))){
-            System.out.println(lastNumber.replaceAll(TEST,"+7 ($2) $3 $4-$5"));
+        if((number.length()==11)&&((number.charAt(0)=='7')||(number.charAt(0)=='8'))){
+            System.out.println(number.replaceAll(TEST,"+7 ($2) $3 $4-$5"));
         }else {System.out.println("Ошибка");}
 
     }
