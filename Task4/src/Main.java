@@ -4,8 +4,7 @@ public class Main {
     public static void main(String[] args) {
     callNumber();
     }
-    //  89999843233
-    // +7 (999) 984 32-33
+
     public static void callNumber(){
         System.out.println("Введите телевонный номер: ");
         String number = new Scanner(System.in).nextLine();

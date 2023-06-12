@@ -5,7 +5,7 @@ public class Main {
         fullNames();
     }
     private static void fullNames(){
-        final String REGEX_NAME ="([А-я]+-*[А-я]* [А-я]+-*[А-я]* [А-я]+-*[А-я]*)";
+        final String REGEX_NAME ="(([А-я]+-*[А-я]* ){2}[А-я]+-*[А-я]*)";
         System.out.println("Введите ФИО: ");
         String name = new Scanner(System.in).nextLine();
         if(!name.matches(REGEX_NAME)
